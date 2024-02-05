@@ -67,6 +67,21 @@ Public Class ManageAnggota
             Call FormTerbuka()
             Call ChangeButton()
             State = "Input"
+            KONEKSI()
+            CMD = New OdbcCommand("Select * From anggota WHERE kode_anggota in (Select max(kode_anggota) from anggota)", CONN)
+            DR = CMD.ExecuteReader
+            DR.Read()
+            If DR.HasRows Then
+                Dim auto_kode As String
+                Dim kodeanggota As String
+                Dim urutan As Integer
+                auto_kode = DR.Item(0).Replace("AGT", "")
+                urutan = Convert.ToInt32(auto_kode)
+                urutan += 1
+                kodeanggota = "AGT" + urutan.ToString("000")
+                TBkodeAnggota.Text = kodeanggota
+                TBkodeAnggota.Enabled = False
+            End If
         ElseIf BInput.Text = "Simpan" Then
             Dim jk As String
             Dim jk_checked As Boolean

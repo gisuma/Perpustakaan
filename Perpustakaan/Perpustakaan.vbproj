@@ -77,6 +77,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManageBuku.Designer.vb">
+      <DependentUpon>ManageBuku.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManageBuku.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ManageAnggota.Designer.vb">
       <DependentUpon>ManageAnggota.vb</DependentUpon>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageAnggota.resx">
       <DependentUpon>ManageAnggota.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageBuku.resx">
+      <DependentUpon>ManageBuku.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuUtama.resx">
       <DependentUpon>MenuUtama.vb</DependentUpon>
