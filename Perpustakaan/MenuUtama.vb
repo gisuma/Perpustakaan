@@ -38,4 +38,8 @@
     Private Sub AnggotaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AnggotaToolStripMenuItem.Click
         ManageAnggota.ShowDialog()
     End Sub
+#add menu tool buku
+    Private Sub BukuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BukuToolStripMenuItem.Click
+        ManageBuku.ShowDialog()
+    End Sub
 End Class
